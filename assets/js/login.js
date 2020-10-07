@@ -22,7 +22,7 @@ $(function() {
             //要个密码框中的内容进行比较 不一致返回错误
             var pwd = $(".reg_box [name=password]").val();
             if (pwd !== value) {
-                return '两次密码不一致';
+                return '请输入相同的密码！';
             }
         }
     })

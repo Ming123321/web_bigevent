@@ -23,13 +23,14 @@
             <ul class="layui-nav layui-layout-right">
                 <li class="layui-nav-item">
                     <a href="javascript:;" class="userinfo">
-                        <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                        <!-- <img src="http://t.cn/RCzsdCq" class="layui-nav-img"> -->
+                        <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" class="layui-nav-img">
                         <span class="txt_avatar">A</span> 个人中心
                     </a>
                     <dl class="layui-nav-child">
-                        <dd><a href="">基本资料</a></dd>
-                        <dd><a href="">更换头像</a></dd>
-                        <dd><a href="">重置密码</a></dd>
+                        <dd><a href="/user/user_info.html" target="fm">基本资料</a></dd>
+                        <dd><a href="/user/user_avatar.html" target="fm">更换头像</a></dd>
+                        <dd><a href="/user/user_pwd.html" target="fm">重置密码</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item">
@@ -45,10 +46,11 @@
                 <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
                 <div class="userinfo">
                     <!-- 图片头像和文本头像 -->
-                    <!-- 如果用户没有上传自己的头像 就显示文本头像 上床头像后就可以选择 图片头像 -->
-                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                    <!-- 如果用户没有上传自己的头像 就显示文本头像 上传头像后就可以选择 图片头像 -->
+                    <!-- <img src="http://t.cn/RCzsdCq" class="layui-nav-img"> -->
+                    <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" class="layui-nav-img">
                     <span class="txt_avatar">A</span>
-                    <span id="welcome">欢迎 </span>
+                    <span id="welcome">欢迎 &nbsp;&nbsp;</span>
                 </div>
                 <ul class="layui-nav layui-nav-tree" lay-shrink="all">
                     <li class="layui-nav-item layui-this">
@@ -71,9 +73,9 @@
                             <span class="iconfont icon-user"></span>个人中心
                         </a>
                         <dl class="layui-nav-child">
-                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i>基本资料</a></dd>
-                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i>更换头像</a></dd>
-                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i>重置密码</a></dd>
+                            <dd><a href="/user/user_info.html" target="fm"><i class="layui-icon layui-icon-app"></i>基本资料</a></dd>
+                            <dd><a href="/user/user_avatar.html" target="fm"><i class="layui-icon layui-icon-app"></i>更换头像</a></dd>
+                            <dd><a href="/user/user_pwd.html" target="fm"><i class="layui-icon layui-icon-app"></i>重置密码</a></dd>
                         </dl>
                     </li>
                 </ul>
@@ -82,7 +84,7 @@
 
         <div class="layui-body">
             <!-- 内容主体区域 -->
-            <iframe name="fm" src="./home/dashboard.html" frameborder="0"></iframe>
+            <iframe name="fm" src="/home/dashboard.html" frameborder="0"></iframe>
         </div>
 
         <div class="layui-footer">
