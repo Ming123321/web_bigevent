@@ -28,9 +28,14 @@ $(function() {
                     return layui.layer.msg("重置密码失败！");
                 }
                 // console.log(res);
-                layui.layer.msg("重置密码成功！");
+                layui.layer.msg("重置密码成功！ 2s后重新登录");
                 //重置表单
                 $(".layui-form")[0].reset();
+
+                //修改好密码以后 2s重新登录
+                setTimeout(function() {
+                    window.parent.location.href = '/login.html'
+                }, 2000)
             }
         })
     })

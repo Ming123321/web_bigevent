@@ -1,6 +1,8 @@
+getUserInfo();
+
 $(function() {
 
-    getUserInfo();
+    // getUserInfo();
 
     //点击按钮 实现退出功能
     $("#btnLogout").on('click', function() {
@@ -10,7 +12,7 @@ $(function() {
             //1.清空本地存储
             localStorage.removeItem('token');
             //2.重新跳转登陆页面
-            location.href = './login.html';
+            location.href = '/login.html';
 
             //关闭confirm 询问框
             layer.close(index);
@@ -18,6 +20,7 @@ $(function() {
     })
 })
 
+//注意 getUserInfo() 函数要写在jquery入口函数外 这样才能在外部调用到它
 //获取用户的基本信息
 function getUserInfo() {
     $.ajax({
@@ -27,6 +30,7 @@ function getUserInfo() {
         // headers: {
         //     Authorization: localStorage.getItem('token') || '',
         // },
+        async: false, //把ajax 变为同步请求
         success: function(res) {
             if (res.status !== 0) {
                 return layui.layer.msg("获取用户信息失败");
@@ -62,6 +66,7 @@ function renderAvatar(user) {
     } else {
         //渲染文本头像
         $('.layui-nav-img').hide();
+        //获取到文本的第一个字符
         var first = name[0].toUpperCase();
         $('.txt_avatar').html(first).show();
     }

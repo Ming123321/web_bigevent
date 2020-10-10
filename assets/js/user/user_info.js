@@ -1,5 +1,6 @@
 $(function() {
     var form = layui.form;
+    var layer = layui.layer;
 
     //自定义校验规则
     form.verify({
