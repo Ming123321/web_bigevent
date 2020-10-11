@@ -46,6 +46,12 @@ body {
     overflow: hidden;
 }
 
+#image {
+    max-width: 400px !important;
+    /* This rule is very important, please do not ignore this! */
+    max-height: 280px !important;
+}
+
 #Addfile {
     display: none;
 }

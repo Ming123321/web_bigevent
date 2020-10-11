@@ -82,10 +82,14 @@ $(function() {
             .toBlob(function(blob) { // 将 Canvas 画布上的内容，转化为文件对象
                 // 得到文件对象后，进行后续的操作
                 fd.append('cover_img', blob);
+                //请求写在图片里
+                publishArt(fd);
             });
+        // fd.forEach(function(i, v) {
+        //     console.log(i, v);
+        // });
         //4.发送请求
-        publishArt(fd);
-        // console.log(fd);
+        // publishArt(fd);
     })
 
     //发布文章的方法
